@@ -8,23 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		44069F402A176AEC002A617D /* SpaceX_APIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44069F3F2A176AEC002A617D /* SpaceX_APIApp.swift */; };
-		44069F422A176AEC002A617D /* LaunchesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44069F412A176AEC002A617D /* LaunchesListView.swift */; };
+		44069F422A176AEC002A617D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44069F412A176AEC002A617D /* MainView.swift */; };
 		44069F442A176AED002A617D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44069F432A176AED002A617D /* Assets.xcassets */; };
 		44069F472A176AED002A617D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44069F462A176AED002A617D /* Preview Assets.xcassets */; };
 		44069F4E2A176B3C002A617D /* LaunchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44069F4D2A176B3C002A617D /* LaunchesViewModel.swift */; };
 		44922B9D2A2F2B5E00DE01D7 /* LinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44922B9C2A2F2B5E00DE01D7 /* LinksView.swift */; };
 		44922B9F2A2F316500DE01D7 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44922B9E2A2F316500DE01D7 /* TestView.swift */; };
+		44BFF8A02A38903200C44EDE /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BFF89F2A38903200C44EDE /* Company.swift */; };
+		44BFF8A32A38905B00C44EDE /* Headquarters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BFF8A22A38905B00C44EDE /* Headquarters.swift */; };
+		44BFF8A52A38907400C44EDE /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BFF8A42A38907300C44EDE /* Links.swift */; };
+		44BFF8AA2A38911E00C44EDE /* CompanyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BFF8A92A38911E00C44EDE /* CompanyVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44069F3C2A176AEC002A617D /* SpaceX_API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX_API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44069F3F2A176AEC002A617D /* SpaceX_APIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_APIApp.swift; sourceTree = "<group>"; };
-		44069F412A176AEC002A617D /* LaunchesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesListView.swift; sourceTree = "<group>"; };
+		44069F412A176AEC002A617D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		44069F432A176AED002A617D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44069F462A176AED002A617D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		44069F4D2A176B3C002A617D /* LaunchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewModel.swift; sourceTree = "<group>"; };
 		44922B9C2A2F2B5E00DE01D7 /* LinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksView.swift; sourceTree = "<group>"; };
-		44922B9E2A2F316500DE01D7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		44922B9E2A2F316500DE01D7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestView.swift; path = ../TestView.swift; sourceTree = "<group>"; };
+		44BFF89F2A38903200C44EDE /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		44BFF8A22A38905B00C44EDE /* Headquarters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Headquarters.swift; sourceTree = "<group>"; };
+		44BFF8A42A38907300C44EDE /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		44BFF8A92A38911E00C44EDE /* CompanyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				44069F3F2A176AEC002A617D /* SpaceX_APIApp.swift */,
-				44069F412A176AEC002A617D /* LaunchesListView.swift */,
-				44069F4D2A176B3C002A617D /* LaunchesViewModel.swift */,
-				44922B9E2A2F316500DE01D7 /* TestView.swift */,
+				44BFF8A72A3890B000C44EDE /* Screen */,
+				44BFF8A82A3890FC00C44EDE /* CompanyViewModel */,
+				44BFF8A12A38903700C44EDE /* Model */,
 				44922B9B2A2F2B3F00DE01D7 /* View */,
 				44069F432A176AED002A617D /* Assets.xcassets */,
 				44069F452A176AED002A617D /* Preview Content */,
@@ -79,9 +87,37 @@
 		44922B9B2A2F2B3F00DE01D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44922B9E2A2F316500DE01D7 /* TestView.swift */,
 				44922B9C2A2F2B5E00DE01D7 /* LinksView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		44BFF8A12A38903700C44EDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44BFF89F2A38903200C44EDE /* Company.swift */,
+				44BFF8A22A38905B00C44EDE /* Headquarters.swift */,
+				44BFF8A42A38907300C44EDE /* Links.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44BFF8A72A3890B000C44EDE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				44069F412A176AEC002A617D /* MainView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		44BFF8A82A3890FC00C44EDE /* CompanyViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				44BFF8A92A38911E00C44EDE /* CompanyVM.swift */,
+				44069F4D2A176B3C002A617D /* LaunchesViewModel.swift */,
+			);
+			path = CompanyViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,10 +191,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				44069F4E2A176B3C002A617D /* LaunchesViewModel.swift in Sources */,
-				44069F422A176AEC002A617D /* LaunchesListView.swift in Sources */,
+				44069F422A176AEC002A617D /* MainView.swift in Sources */,
 				44922B9F2A2F316500DE01D7 /* TestView.swift in Sources */,
+				44BFF8A32A38905B00C44EDE /* Headquarters.swift in Sources */,
+				44BFF8AA2A38911E00C44EDE /* CompanyVM.swift in Sources */,
 				44922B9D2A2F2B5E00DE01D7 /* LinksView.swift in Sources */,
 				44069F402A176AEC002A617D /* SpaceX_APIApp.swift in Sources */,
+				44BFF8A02A38903200C44EDE /* Company.swift in Sources */,
+				44BFF8A52A38907400C44EDE /* Links.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
