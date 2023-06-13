@@ -52,37 +52,11 @@ struct LaunchesListView: View {
                 
                 
                 VStack(alignment: .leading, spacing: 20) {
-//                    Image("spaceXLogo")
-//                        .resizable()
-//                        .scaledToFit()
-//                        .padding(.horizontal, 50)
-//                        .padding(.bottom, 20)
                     
-                    
+                    Text(company.founder!)
+                    Text(company.name!)
                     // MARK: - ADDRESS
-                    
-                    Text(company.name! + ", " + company.headquarters!.address + ", " + company.headquarters!.city + ", " + company.headquarters!.state)
-                        .font(.title3)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .overlay(
-                            Rectangle().stroke(Color.white, lineWidth: 2)
-                        )
-                    
 //
-//                    Text(company.founder! + ", " + String(company.founded!) + ", " + String(company.employees!))
-//                        .padding()
-//                        .frame(maxWidth: .infinity)
-//                        .overlay(
-//                            Rectangle().stroke(Color.white, lineWidth: 2)
-//                        )
-//
-//                    Text(company.summary!)
-//                        .padding()
-//                        .frame(maxWidth: .infinity)
-//                        .overlay(
-//                            Rectangle().stroke(Color.white, lineWidth: 2)
-//                        )
                     
                     LinksView()
                         .padding()
@@ -129,8 +103,36 @@ struct LaunchesListView: View {
 
 struct LaunchesListView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchesListView(company: Company(headquarters: Headquarters(address: "", city: "", state: ""), links: Links(website: "", flickr: "", twitter: "", elonTwitter: ""), name: "", founder: "", founded: 0, employees: 0, vehichle: 0, launchSites: 0, testSites: 0, valuation: 0, summary: ""))
+    let sampleCompany = Company(headquarters: Headquarters(address: "", city: "", state: ""), links: Links(website: "", flickr: "", twitter: "", elonTwitter: ""), name: "", founder: "", founded: 0, employees: 0, vehichle: 0, launchSites: 0, testSites: 0, valuation: 0, summary: "")
+        
+        LaunchesListView(company: sampleCompany)
+
     }
 }
 
+
+//        LaunchesListView(company: Company(headquarters: Headquarters(address: "", city: "", state: ""), links: Links(website: "", flickr: "", twitter: "", elonTwitter: ""), name: "", founder: "", founded: 0, employees: 0, vehichle: 0, launchSites: 0, testSites: 0, valuation: 0, summary: ""))
+
+//                    Text(company.name! + ", " + company.headquarters!.address + ", " + company.headquarters!.city + ", " + company.headquarters!.state)
+//                        .font(.title3)
+//                        .padding()
+//                        .frame(maxWidth: .infinity)
+//                        .overlay(
+//                            Rectangle().stroke(Color.white, lineWidth: 2)
+//                        )
+                    
+//
+//                    Text(company.founder! + ", " + String(company.founded!) + ", " + String(company.employees!))
+//                        .padding()
+//                        .frame(maxWidth: .infinity)
+//                        .overlay(
+//                            Rectangle().stroke(Color.white, lineWidth: 2)
+//                        )
+//
+//                    Text(company.summary!)
+//                        .padding()
+//                        .frame(maxWidth: .infinity)
+//                        .overlay(
+//                            Rectangle().stroke(Color.white, lineWidth: 2)
+//                        )
 
