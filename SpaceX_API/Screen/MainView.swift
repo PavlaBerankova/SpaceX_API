@@ -22,22 +22,21 @@ struct MainView: View {
             ZStack {
                 Image("file1")
                     .resizable()
-                
-                
-                VStack(alignment: .leading, spacing: 20) {
+                VStack {
                     
-                    Text(company.founder!)
-                    Text(company.name!)
-                    Text(company.summary!)
-                    // MARK: - ADDRESS
-//
+                    LogoView()
                     
-                    LinksView()
-                        .padding()
+                    VStack(alignment: .leading, spacing: 20) {
+                        
+                        DetailView(title: "Address:", detail: company.name!)
+                        DetailView(title: "Employees", detail: String(company.founded!))
+                        DetailView(title: "Employees", detail: "\(company.name!) founded \(company.founder!) at you")
+                        Spacer()
+                        LinksView()
+                            .padding()
+                    }
+                   
                 }
-                .padding(.horizontal)
-                .foregroundColor(.white)
-                
             }
             .ignoresSafeArea()
             .task {
@@ -49,17 +48,14 @@ struct MainView: View {
             }
         }
     }
-    
-    
-   
 }
 
 struct LaunchesListView_Previews: PreviewProvider {
     static var previews: some View {
-    let sampleCompany = Company(headquarters: Headquarters(address: "", city: "", state: ""), links: Links(website: "", flickr: "", twitter: "", elonTwitter: ""), name: "", founder: "", founded: 0, employees: 0, vehichle: 0, launchSites: 0, testSites: 0, valuation: 0, summary: "")
+        let sampleCompany = Company(headquarters: Headquarters(address: "", city: "", state: ""), links: Links(website: "", flickr: "", twitter: "", elonTwitter: ""), name: "", founder: "", founded: 0, employees: 0, vehichle: 0, launchSites: 0, testSites: 0, valuation: 0, summary: "")
         
         MainView(company: sampleCompany)
-
+        
     }
 }
 
@@ -73,7 +69,7 @@ struct LaunchesListView_Previews: PreviewProvider {
 //                        .overlay(
 //                            Rectangle().stroke(Color.white, lineWidth: 2)
 //                        )
-                    
+
 //
 //                    Text(company.founder! + ", " + String(company.founded!) + ", " + String(company.employees!))
 //                        .padding()
