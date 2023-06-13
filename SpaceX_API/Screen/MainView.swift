@@ -20,23 +20,29 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Image("file1")
+                Image("backgroundSpace2")
                     .resizable()
-                VStack {
+                VStack(alignment: .leading, spacing: 30) {
+                    Image("spaceXLogo")
+                        .resizable()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
+                        .padding(.top, 50)
                     
-                    LogoView()
                     
-                    VStack(alignment: .leading, spacing: 20) {
-                        
-                        DetailView(title: "Address:", detail: company.name!)
-                        DetailView(title: "Employees", detail: String(company.founded!))
-                        DetailView(title: "Employees", detail: "\(company.name!) founded \(company.founder!) at you")
-                        Spacer()
-                        LinksView()
-                            .padding()
-                    }
-                   
+                    
+                    DetailView(title: "Headquarters:", detail: "Address: \(company.headquarters?.address ?? "Address")\nCity: \(company.headquarters?.city ?? "City")\nState: \(company.headquarters?.state ?? "State")")
+                    
+                    DetailView(title: "Info:", detail: "The company was founded by \(company.founder!) in \(company.founded!). Has \(company.employees!) employees.")
+                    
+                    DetailView(title: "Summary:", detail: company.summary!)
+                    
+                    LinksView()
+                        .padding()
+                    Spacer()
                 }
+                .padding(.horizontal, 15)
+                
             }
             .ignoresSafeArea()
             .task {

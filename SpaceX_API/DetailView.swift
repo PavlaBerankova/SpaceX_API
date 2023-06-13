@@ -12,31 +12,29 @@ struct DetailView: View {
     var detail: String
     
     var body: some View {
-        ZStack {
-            Image("file1")
-                .resizable()
-            VStack(alignment: .leading) {
+     VStack(alignment: .leading) {
                 
                 Text(title)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
+                    .font(.headline)
                 Text(detail)
-                    .font(.title3)
+             .font(.callout)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(RoundedRectangle(cornerRadius: 5)
-                        .fill(Color.black)
+                        .fill(Color("spaceBlueColor"))
                         .frame(maxWidth: .infinity)
-                        .background(RoundedRectangle(cornerRadius: 5).stroke(Color.white, lineWidth: 4)))
+                        .background(RoundedRectangle(cornerRadius: 5).stroke(Color.white, lineWidth: 2)))
             }
             .foregroundColor(.white)
-            .padding(.horizontal)
-        }
+         
+        
         
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(title: "Info", detail: "SpaceX this is the test how big is this frame. Ok frame is fine.")
+        DetailView(title: "Info:", detail: "SpaceX this is the test how big is this frame. Ok frame is fine.")
     }
 }
