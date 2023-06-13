@@ -25,6 +25,8 @@ struct DetailView: View {
                         .fill(Color("spaceBlueColor"))
                         .frame(maxWidth: .infinity)
                         .background(RoundedRectangle(cornerRadius: 5).stroke(Color.white, lineWidth: 2)))
+                    .shadow(color: Color("shadowColor"), radius: 5.0)
+                    
             }
             .foregroundColor(.white)
          
