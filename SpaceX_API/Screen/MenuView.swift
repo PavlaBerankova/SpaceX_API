@@ -26,9 +26,6 @@ struct MenuView: View {
                             Text("Launches")
                         }
                 }
-            
-           
-            
         }
     }
 }
