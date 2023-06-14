@@ -20,32 +20,23 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Image("backgroundSpace2")
-                    .resizable()
-                VStack {
-                    VStack(alignment: .leading, spacing: 20) {
-                        Image("spaceXLogo")
-                            .resizable()
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50)
-//                            .padding(.top, 10)
-                            .padding(.bottom, 20)
-                        
-                        
-                        
-                        DetailView(title: "Headquarters:", detail: "Address: \(company.headquarters?.address ?? "Address")\nCity: \(company.headquarters?.city ?? "City")\nState: \(company.headquarters?.state ?? "State")")
-                        
-                        DetailView(title: "Info:", detail: "The company was founded by \(company.founder!) in \(company.founded!). Has \(company.employees!) employees.")
-                        
-                        DetailView(title: "Summary:", detail: company.summary!)
-                    }
-                    .padding(.horizontal, 15)
+                BackgroundView()
+                
+                VStack(spacing: 40) {
                     
-                    VStack(alignment: .center) {
-                        LinksView()
-                            .padding()
-                    }
+                    LogoView()
+                    
+                    DetailView(detail: "\(company.headquarters?.address ?? "Address")\n\(company.headquarters?.city ?? "City")\n\(company.headquarters?.state ?? "State")")
+                    
+                    DetailView(detail: "The company was founded by \(company.founder!) in \(company.founded!). Has \(company.employees!) employees.")
+                    
+                    DetailView(detail: company.summary!)
+                    
+                    LinksView()
                 }
+                .padding(.horizontal, 15)
+                .padding(.bottom, 50)
+                
                 Spacer()
             }
             .ignoresSafeArea()

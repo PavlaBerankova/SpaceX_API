@@ -8,22 +8,23 @@
 import SwiftUI
 
 struct SecondView: View {
+    
     var body: some View {
         ZStack {
-            Image("backgroundSpace2")
-                .resizable()
+            BackgroundView()
             
             VStack {
-                Text("Comming Soon")
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(RoundedRectangle(cornerRadius: 5)
-                        .fill(Color("spaceBlueColor"))
-                        .frame(maxWidth: .infinity)
-                        .background(RoundedRectangle(cornerRadius: 5).stroke(Color.white, lineWidth: 2)))
-                    .shadow(color: Color("shadowColor"), radius: 3.0)
+                DetailView(detail: "Comming Soon")
+//                Text("Comming Soon")
+//                    .foregroundColor(.white)
+//                    .font(.largeTitle)
+//                    .padding()
+//                    .frame(maxWidth: .infinity)
+//                    .background(RoundedRectangle(cornerRadius: 5)
+//                        .fill(Color("spaceBlueColor"))
+//                        .frame(maxWidth: .infinity)
+//                        .background(RoundedRectangle(cornerRadius: 5).stroke(Color.white, lineWidth: 2)))
+//                    .shadow(color: Color("shadowColor"), radius: 3.0)
             }
             .padding(.horizontal)
             

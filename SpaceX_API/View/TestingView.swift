@@ -5,7 +5,9 @@
 //  Created by Pavla Beránková on 13.06.2023.
 //
 
-//import SwiftUI
+import SwiftUI
+
+
 //
 //struct TestingView: View {
 //    var company: Company
