@@ -22,27 +22,31 @@ struct MainView: View {
             ZStack {
                 Image("backgroundSpace2")
                     .resizable()
-                VStack(alignment: .leading, spacing: 30) {
-                    Image("spaceXLogo")
-                        .resizable()
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .padding(.top, 50)
+                VStack {
+                    VStack(alignment: .leading, spacing: 20) {
+                        Image("spaceXLogo")
+                            .resizable()
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50)
+//                            .padding(.top, 10)
+                            .padding(.bottom, 20)
+                        
+                        
+                        
+                        DetailView(title: "Headquarters:", detail: "Address: \(company.headquarters?.address ?? "Address")\nCity: \(company.headquarters?.city ?? "City")\nState: \(company.headquarters?.state ?? "State")")
+                        
+                        DetailView(title: "Info:", detail: "The company was founded by \(company.founder!) in \(company.founded!). Has \(company.employees!) employees.")
+                        
+                        DetailView(title: "Summary:", detail: company.summary!)
+                    }
+                    .padding(.horizontal, 15)
                     
-                    
-                    
-                    DetailView(title: "Headquarters:", detail: "Address: \(company.headquarters?.address ?? "Address")\nCity: \(company.headquarters?.city ?? "City")\nState: \(company.headquarters?.state ?? "State")")
-                    
-                    DetailView(title: "Info:", detail: "The company was founded by \(company.founder!) in \(company.founded!). Has \(company.employees!) employees.")
-                    
-                    DetailView(title: "Summary:", detail: company.summary!)
-                    
-                    LinksView()
-                        .padding()
-                    Spacer()
+                    VStack(alignment: .center) {
+                        LinksView()
+                            .padding()
+                    }
                 }
-                .padding(.horizontal, 15)
-                
+                Spacer()
             }
             .ignoresSafeArea()
             .task {

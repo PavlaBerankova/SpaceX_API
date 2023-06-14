@@ -12,25 +12,24 @@ struct DetailView: View {
     var detail: String
     
     var body: some View {
-     VStack(alignment: .leading) {
-                
+        VStack(alignment: .leading) {
+                    
                 Text(title)
-                    .foregroundColor(.white)
-                    .font(.headline)
+                .foregroundColor(Color("titleColor"))
+                .font(.headline)
+                    
                 Text(detail)
-             .font(.callout)
+                    .font(.callout)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(RoundedRectangle(cornerRadius: 5)
                         .fill(Color("spaceBlueColor"))
                         .frame(maxWidth: .infinity)
                         .background(RoundedRectangle(cornerRadius: 5).stroke(Color.white, lineWidth: 2)))
-                    .shadow(color: Color("shadowColor"), radius: 5.0)
-                    
+                    .shadow(color: Color("shadowColor"), radius: 2.0)
+                
             }
             .foregroundColor(.white)
-         
-        
         
     }
 }
