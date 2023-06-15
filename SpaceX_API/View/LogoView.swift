@@ -24,6 +24,7 @@ struct LogoView_Previews: PreviewProvider {
             Color.black
             LogoView()
         }
+        .ignoresSafeArea()
         
     }
 }

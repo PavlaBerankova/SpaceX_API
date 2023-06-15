@@ -15,6 +15,7 @@ enum APIError: Error {
 
 struct MainView: View {
     @State var company: Company
+    let links: Links
     @ObservedObject var model = CompanyVM()
     
     var body: some View {
@@ -28,11 +29,11 @@ struct MainView: View {
                     
                     DetailView(detail: "\(company.headquarters?.address ?? "Address"), \(company.headquarters?.city ?? "City"), \(company.headquarters?.state ?? "State")").bold()
                     
-                    DetailView(detail: "The company was founded by \(company.founder!). \(company.name!) has \(company.employees!) employees, \(company.launchSites!) launch sites, \(company.testSites!) test sides and her valuation is \(formattedValuation) USD.")
+                    DetailView(detail: "The company was founded by \(company.founder!). \(company.name!) has \(company.employees!) employees, \(company.launchSites!) launch sites, \(company.testSites!) test sides.\nHer valuation is \(formattedValuation) USD.")
                     
                     DetailView(detail: company.summary!)
                     
-                    LinksView()
+                    LinksView(link: links.twitter)
                 }
                 .padding(.horizontal, 15)
                 .padding(.bottom, 50)
@@ -66,7 +67,9 @@ struct LaunchesListView_Previews: PreviewProvider {
     static var previews: some View {
         let sampleCompany = Company(headquarters: Headquarters(address: "", city: "", state: ""), links: Links(website: "", flickr: "", twitter: "", elonTwitter: ""), name: "", founder: "", founded: 0, employees: 0, vehichle: 0, launchSites: 0, testSites: 0, valuation: 0, summary: "")
         
-        MainView(company: sampleCompany)
+        let sampleLinks = Links(website: "", flickr: "", twitter: "", elonTwitter: "")
+        
+        MainView(company: sampleCompany, links: sampleLinks)
         
     }
 }

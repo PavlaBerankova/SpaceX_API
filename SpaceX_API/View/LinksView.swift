@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LinksView: View {
+    let link: String
+    
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
                 Image("twitter")
@@ -16,7 +18,7 @@ struct LinksView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 5))
                     .frame(width: 30,height: 30)
                     .onTapGesture {
-                        if let twitterURL = URL(string: "https://twitter.com/SpaceX") {
+                        if let twitterURL = URL(string: link) {
                             UIApplication.shared.open(twitterURL)
                         }
                     }
@@ -48,6 +50,6 @@ struct LinksView: View {
 
 struct LinksView_Previews: PreviewProvider {
     static var previews: some View {
-        LinksView()
+        LinksView(link: "https://twitter.com/SpaceX")
     }
 }
