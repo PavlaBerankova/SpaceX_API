@@ -16,7 +16,7 @@ struct LinksView: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .clipShape(RoundedRectangle(cornerRadius: 5))
-            .frame(width: 30,height: 30)
+            .frame(width: 40,height: 40)
             .onTapGesture {
                 if let linkURL = URL(string: link) {
                     UIApplication.shared.open(linkURL)

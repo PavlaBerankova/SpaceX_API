@@ -25,7 +25,7 @@ struct MainView: View {
                     
                     DetailView(detail: company.summary!)
                     
-                    HStack(spacing: 20) {
+                    HStack(spacing: 30) {
                         LinksView(link: company.links?.twitter ?? "Twitter", image: "twitter")
                         LinksView(link: company.links?.flickr ?? "Flickr", image: "flickr")
                         LinksView(link: company.links?.website ?? "Website", image: "website")
