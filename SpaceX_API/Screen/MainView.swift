@@ -21,7 +21,7 @@ struct MainView: View {
                     
                     DetailView(detail: "\(company.headquarters?.address ?? "Address"), \(company.headquarters?.city ?? "City"), \(company.headquarters?.state ?? "State")").bold()
                     
-                    DetailView(detail: "The company was founded by \(company.founder!). \(company.name!) has \(company.employees!) employees, \(company.launchSites!) launch sites, \(company.testSites!) test sides.\nHer valuation is \(formattedValuation) USD.")
+                    DetailView(detail: "The company was founded by \(company.founder!). \(company.name!) has \(company.employees!) employees, \(company.launchSites!) launch sites, \(company.testSites!) test sides.\nIts valuation is \(formattedValuation) USD.")
                     
                     DetailView(detail: company.summary!)
                     
