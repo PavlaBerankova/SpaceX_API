@@ -28,7 +28,7 @@ struct MainView: View {
                     
                     DetailView(detail: "\(company.headquarters?.address ?? "Address")\n\(company.headquarters?.city ?? "City")\n\(company.headquarters?.state ?? "State")")
                     
-                    DetailView(detail: "The company was founded by \(company.founder!) in \(company.founded!). Has \(company.employees!) employees.")
+                    DetailView(detail: "The company was founded by \(company.founder!). \(company.name!) has \(company.employees!) employees, \(company.launchSites!) launch sites, \(company.testSites!) test sides and her valuation is \(formattedValuation) USD.")
                     
                     DetailView(detail: company.summary!)
                     
@@ -47,6 +47,17 @@ struct MainView: View {
                     print("Error")
                 }
             }
+        }
+    }
+    
+    var formattedValuation: String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        if let valuation = company.valuation {
+            return numberFormatter.string(from: NSNumber(value: valuation)) ?? ""
+        } else {
+            return ""
         }
     }
 }
