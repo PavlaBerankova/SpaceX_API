@@ -9,47 +9,24 @@ import SwiftUI
 
 struct LinksView: View {
     let link: String
+    let image: String
     
     var body: some View {
-        HStack(alignment: .center, spacing: 20) {
-                Image("twitter")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                    .frame(width: 30,height: 30)
-                    .onTapGesture {
-                        if let twitterURL = URL(string: link) {
-                            UIApplication.shared.open(twitterURL)
-                        }
-                    }
-            
-                Image("flickr")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                    .frame(width: 30,height: 30)
-                    .onTapGesture {
-                        if let flickrURL = URL(string: "https://www.flickr.com/photos/spacex/") {
-                            UIApplication.shared.open(flickrURL)
-                        }
-                    }
-            
-                Image("space1")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                    .frame(width: 30,height: 30)
-                    .onTapGesture {
-                        if let websiteURL = URL(string: "https://www.spacex.com/") {
-                            UIApplication.shared.open(websiteURL)
-                        }
-                    }
-        }
+        Image(image)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .clipShape(RoundedRectangle(cornerRadius: 5))
+            .frame(width: 30,height: 30)
+            .onTapGesture {
+                if let linkURL = URL(string: link) {
+                    UIApplication.shared.open(linkURL)
+                }
+            }
     }
 }
 
 struct LinksView_Previews: PreviewProvider {
     static var previews: some View {
-        LinksView(link: "https://twitter.com/SpaceX")
+        LinksView(link: "https://twitter.com/SpaceX", image: "twitter")
     }
 }

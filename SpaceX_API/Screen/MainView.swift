@@ -15,9 +15,8 @@ enum APIError: Error {
 
 struct MainView: View {
     @State var company: Company
-    let links: Links
     @ObservedObject var model = CompanyVM()
-    
+   
     var body: some View {
         NavigationStack {
             ZStack {
@@ -33,7 +32,11 @@ struct MainView: View {
                     
                     DetailView(detail: company.summary!)
                     
-                    LinksView(link: links.twitter)
+                    HStack(spacing: 20) {
+                        LinksView(link: company.links?.twitter ?? "Twitter", image: "twitter")
+                        LinksView(link: company.links?.flickr ?? "Flickr", image: "flickr")
+                        LinksView(link: company.links?.website ?? "Website", image: "website")
+                    }
                 }
                 .padding(.horizontal, 15)
                 .padding(.bottom, 50)
@@ -67,9 +70,9 @@ struct LaunchesListView_Previews: PreviewProvider {
     static var previews: some View {
         let sampleCompany = Company(headquarters: Headquarters(address: "", city: "", state: ""), links: Links(website: "", flickr: "", twitter: "", elonTwitter: ""), name: "", founder: "", founded: 0, employees: 0, vehichle: 0, launchSites: 0, testSites: 0, valuation: 0, summary: "")
         
-        let sampleLinks = Links(website: "", flickr: "", twitter: "", elonTwitter: "")
+//        let sampleLinks = Links(website: "", flickr: "", twitter: "", elonTwitter: "")
         
-        MainView(company: sampleCompany, links: sampleLinks)
+        MainView(company: sampleCompany)
         
     }
 }
