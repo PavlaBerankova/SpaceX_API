@@ -32,7 +32,7 @@ struct MainView: View {
                         LinksView(link: company.links?.website ?? "Website", image: "website")
                     }
                 }
-                .padding(.horizontal, 15)
+                .padding(.horizontal, 20)
                 .padding(.bottom, 50)
                 
                 Spacer()
