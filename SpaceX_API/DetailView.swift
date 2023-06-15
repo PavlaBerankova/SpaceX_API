@@ -15,6 +15,7 @@ struct DetailView: View {
                 Text(detail)
                     .font(.callout)
                     .padding()
+                    .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity)
                     .background(RoundedRectangle(cornerRadius: 5)
                         .fill(Color("spaceBlueColor"))
