@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct BackgroundView: View {
-    let backgroundImage = "backgroundSpace1"
+    let backgroundImage = "backgroundSpace"
     
     var body: some View {
         ZStack {
             Image(backgroundImage)
                 .resizable()
-                
         }
         .ignoresSafeArea()
     }

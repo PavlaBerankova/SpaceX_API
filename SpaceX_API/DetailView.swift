@@ -22,7 +22,6 @@ struct DetailView: View {
                         .frame(maxWidth: .infinity)
                         .background(RoundedRectangle(cornerRadius: 5).stroke(Color.white, lineWidth: 2)))
                     .shadow(color: Color("shadowColor"), radius: 3.0)
-                
             }
             .foregroundColor(.white)
         
