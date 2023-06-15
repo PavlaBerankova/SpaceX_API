@@ -17,7 +17,6 @@ struct MainView: View {
                 BackgroundView()
                 
                 VStack(spacing: 40) {
-                    
                     LogoView()
                     
                     DetailView(detail: "\(company.headquarters?.address ?? "Address"), \(company.headquarters?.city ?? "City"), \(company.headquarters?.state ?? "State")").bold()
