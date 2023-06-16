@@ -28,5 +28,7 @@ struct LinksView: View {
 struct LinksView_Previews: PreviewProvider {
     static var previews: some View {
         LinksView(link: "https://twitter.com/SpaceX", image: "twitter")
+            .previewLayout(.sizeThatFits)
+            .padding()
     }
 }
