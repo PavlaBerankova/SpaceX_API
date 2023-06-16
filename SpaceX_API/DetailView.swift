@@ -1,5 +1,5 @@
 //
-//  Test.swift
+//  DetailView.swift
 //  SpaceX_API
 //
 //  Created by Pavla Beránková on 06.06.2023.
@@ -30,6 +30,8 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(detail: "SpaceX this is the test how big is this frame. Ok frame is fine.")
+        DetailView(detail: "SpaceX. This is the test how big is this frame. Ok, frame is fine.")
+            .previewLayout(.sizeThatFits)
+            .padding()
     }
 }
